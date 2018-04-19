@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<title>Capitalizer</title>
+<SCRIPT>
+var i;
+var testwd;
+function capWords(str) {
+"use strict";
+   var words = str.split(" ");
+    for (i = 0; i < words.length; i+=1) {
+        testwd = words[i];
+        words[i] = testwd.toUpperCase();
+    }
+    document.theForm.results.value = words.join("   ");
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM name="theForm">
+<INPUT type=button value="Knopka" style="width:400px; height:100px; vertical-align: top;" onClick="capWords(document.theForm.results.value)">
+<TEXTAREA name=results rows=45 cols=90>
+</TEXTAREA>
+</FORM>
+</BODY>
+</HTML>
